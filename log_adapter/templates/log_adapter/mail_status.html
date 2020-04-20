@@ -1,0 +1,6 @@
+<h1>{{ entity.queue_id }}</h1>
+<ul>
+{% for attribute in entity.attributes.all %}
+    <li>{{ attribute.name }} = {{ attribute.value }}</li>
+{% endfor %}
+</ul>

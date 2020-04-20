@@ -1,0 +1,9 @@
+{% if entities_list %}
+    <ul>
+    {% for entity in entities_list %}
+        <li><a href="{% url 'log_adapter:detail' entity.id %}">{{ entity.queue_id }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No mails are available.</p>
+{% endif %}
